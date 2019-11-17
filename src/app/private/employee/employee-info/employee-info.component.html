@@ -1,0 +1,18 @@
+<div class="form__container">
+    <mat-form-field>
+        <input matInput placeholder="Ф.И.О. сотрудника" [(ngModel)]="employee.fullName">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-select placeholder="Местоположение"  [(ngModel)]="employee.location" name="value">
+            <mat-option value="Минск">Минск</mat-option>
+            <mat-option value="Молодечно">Молодечно</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="create()">
+        <mat-icon aria-label="Forward">save</mat-icon>
+        Сохранить
+    </button>
+</div>
+

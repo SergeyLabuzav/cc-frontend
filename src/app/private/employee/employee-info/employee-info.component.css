@@ -1,0 +1,10 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__container {
+    display: flex;
+    max-width: 400px;
+    flex-direction: column;
+}

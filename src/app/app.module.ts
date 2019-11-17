@@ -8,18 +8,23 @@ import { MaterialModule } from './material/material.module';
 import { ProductListComponent } from './private/product/product-list/product-list.component';
 import { HomeComponent } from './private/home/home.component';
 import { EmployeeListComponent } from './private/employee/employee-list/employee-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { EmployeeInfoComponent } from './private/employee/employee-info/employee-info.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     HomeComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    EmployeeInfoComponent
   ],
   imports: [
     BrowserModule,
     MaterialModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     RouterModule.forRoot(
       [
         {
@@ -32,10 +37,20 @@ import { EmployeeListComponent } from './private/employee/employee-list/employee
         },
         {
           path: 'employee',
-          component: EmployeeListComponent
+          children: [
+            {
+              path: '',
+              component: EmployeeListComponent,
+            },
+            {
+              path: 'new',
+              component: EmployeeInfoComponent
+            }
+          ]
         }
       ]
-    )
+    ),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

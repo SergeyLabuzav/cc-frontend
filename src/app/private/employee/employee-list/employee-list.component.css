@@ -1,0 +1,22 @@
+.employee__list {
+
+}
+
+.header__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table__container {
+    width: 100%;
+}
+
+.table__content {
+    width: 100%;
+}
+
+.action__container {
+    justify-content: flex-end;
+}
