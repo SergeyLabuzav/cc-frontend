@@ -1,0 +1,22 @@
+.header__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table__container {
+  width: 100%;
+}
+
+.table__content {
+  width: 100%;
+}
+
+.mat-column-id, .mat-column-actions {
+  width: 45px;
+}
+
+.action__container {
+  justify-content: flex-end;
+}
