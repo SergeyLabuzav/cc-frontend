@@ -1,0 +1,12 @@
+<form #locationForm="ngForm">
+  <div class="form__container">
+    <mat-form-field>
+      <input matInput placeholder="Ф.И.О. сотрудника" required [(ngModel)]="location.value" name="value">
+    </mat-form-field>
+
+    <div fxLayout="row">
+      <button mat-raised-button color="primary" [disabled]="locationForm.invalid" (click)="save()">Сохранить</button>
+      <a mat-button class="mat-button-wrapper" (click)="cancel()">Отменить</a>
+    </div>
+  </div>
+</form>
