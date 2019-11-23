@@ -1,0 +1,18 @@
+<mat-toolbar color="primary" class="example-toolbar mat-elevation-z6">
+  <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+  <h1 class="example-app-name">Бухгалтерия</h1>
+  <span class="example-fill-remaining-space"></span>
+  <button mat-icon-button>
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+  <mat-menu #appMenu="matMenu">
+    <ng-template matMenuContent let-name="name">
+      <button mat-menu-item>Настройки</button>
+      <button mat-menu-item>Выход из системы {{name}}</button>
+    </ng-template>
+  </mat-menu>
+
+  <button mat-icon-button [matMenuTriggerFor]="appMenu" [matMenuTriggerData]="{name: 'Сергей'}">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+</mat-toolbar>
