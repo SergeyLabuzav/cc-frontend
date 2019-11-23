@@ -1,0 +1,20 @@
+<form #productForm="ngForm">
+  <div class="form__container">
+    <mat-form-field>
+      <input matInput placeholder="Артикул" required [(ngModel)]="product.code" name="code">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Название товара" required [(ngModel)]="product.shortName" name="shortName">
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput placeholder="Описание товара" matTextareaAutosize matAutosizeMinRows="10" [(ngModel)]="product.description" name="description"></textarea>
+    </mat-form-field>
+
+    <div fxLayout="row">
+      <button mat-raised-button color="primary" [disabled]="productForm.invalid" (click)="save()">Сохранить</button>
+      <a mat-button class="mat-button-wrapper" (click)="previousState()">Отменить</a>
+    </div>
+  </div>
+</form>
