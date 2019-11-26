@@ -1,0 +1,19 @@
+<div class="form__container">
+  <div class="field__container">
+    <div class="item__title"><p>Артикул</p></div>
+    <div class="item__description"><p>{{ product.code }}</p></div>
+  </div>
+  <div class="field__container">
+    <div class="item__title"><p>Название товара</p></div>
+    <div class="item__description"><p>{{ product.shortName }}</p></div>
+  </div>
+  <div class="field__container">
+    <div class="item__title"><p>Описание товара</p></div>
+    <div class="item__description"><p>{{ product.description }}</p></div>
+  </div>
+
+  <div class="action__container">
+    <button mat-raised-button color="primary" [routerLink]="['/', 'product', product.id, 'edit']">Редактировать</button>
+    <a mat-button class="mat-button-wrapper" (click)="previousState()">Назад</a>
+  </div>
+</div>
