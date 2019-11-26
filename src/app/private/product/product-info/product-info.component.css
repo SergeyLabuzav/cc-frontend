@@ -1,0 +1,26 @@
+.form__container  {
+  display: flex;
+  flex-direction: column;
+}
+
+.field__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.item__title {
+  padding-left: 20px;
+  width: 20%;
+  border-bottom: 1px solid #fff;
+}
+.item__description {
+  padding-left: 20px;
+  width: 80%;
+  border-bottom: 1px solid #fff;
+}
+
+.action__container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
