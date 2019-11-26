@@ -1,0 +1,15 @@
+<div class="form__container">
+  <div class="field__container">
+    <div class="item__title"><p>Ф.И.О.</p></div>
+    <div class="item__description"><p>{{ employee.fullName }}</p></div>
+  </div>
+  <div class="field__container">
+    <div class="item__title"><p>Местоположение</p></div>
+    <div class="item__description"><p>{{ employee.location.value }}</p></div>
+  </div>
+
+  <div class="action__container">
+    <button mat-raised-button color="primary" [routerLink]="['/', 'employee', employee.id, 'edit']">Редактировать</button>
+    <a mat-button class="mat-button-wrapper" (click)="previousState()">Назад</a>
+  </div>
+</div>
